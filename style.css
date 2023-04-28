@@ -1,14 +1,20 @@
-#container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    width: 560px;
-    height: 560px;
-    border: 1px solid black;
-    }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 0.5px solid gray;
+}
 
-    #container > div {
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    border: 1px solid gray;
-    }
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.cell {
+    width: calc(100% / 16);
+    border: 0.5px solid gray;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
