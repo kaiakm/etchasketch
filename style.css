@@ -18,10 +18,9 @@ body {
 }
 
 .cell {
-    width: calc(100% / 16);
-    border: 0.5px solid gray;
-    box-sizing: border-box;
     flex-grow: 1;
+    flex-basis: calc(100% / 16);
+    border: 0.5px solid gray;
     background: white;
 }
 
@@ -33,4 +32,9 @@ button {
     border: 2px solid gray;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+button:hover {
+    border: 2px solid lightgray;
+    color: lightgray;
 }
