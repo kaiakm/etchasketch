@@ -12,3 +12,17 @@ for (let i = 0; i < 16; i++) {
 
     container.appendChild(row);
 };
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach(cell => {
+    cell.addEventListener('mouseenter', () => {
+        cell.style.cssText = 'background: gray';
+    });
+});
+
+const btn = document.querySelector('.clear');
+
+btn.addEventListener('click', () => {
+    cells.style.cssText = 'background: white';
+});
