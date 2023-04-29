@@ -58,13 +58,13 @@ function createGrid(size) {
 };
 
 newBtn.addEventListener('click', () => {
-    const gridSize = prompt('grid size (30 max):');
+    const gridSize = prompt('grid size (100 max):');
 
-    if (gridSize <= 30 && gridSize > 0) {
+    if (gridSize <= 100 && gridSize > 0) {
         createGrid(gridSize);
     } else if (gridSize === null) {
 
     } else {
-        alert('a number between 1 and 30 thank you');
+        alert('a number between 1 and 100 thank you');
     };
 });
