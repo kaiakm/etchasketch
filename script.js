@@ -26,23 +26,34 @@ const newBtn = document.querySelector('.new');
 const clearBtn = document.querySelector('.clear');
 
 clearBtn.addEventListener('click', () => {
-    cells.forEach(cell => {
+    const allCells = document.querySelectorAll('.cell, .new-cell');
+    allCells.forEach(cell => {
         cell.style.cssText = 'background: white';
     });
 });
 
 function createGrid(size) {
     container.innerHTML = '';
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-    for (let i = 0; i < size * size; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.style.cssText = 'background: white';
-        cell.addEventListener('mouseenter', () => {
-            cell.style.cssText = 'background: gray';
-        });
+    for(let i = 0; i < size; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
 
-        container.appendChild(cell);
+        for (let j = 0; j < size; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.classList.add('new-cell');
+            cell.style.cssText = 'background: white';
+            cell.addEventListener('mouseenter', () => {
+                cell.style.cssText = 'background: gray';
+            });
+
+            row.appendChild(cell);
+        };
+
+        container.appendChild(row);
     };
 };
 
@@ -56,10 +67,4 @@ newBtn.addEventListener('click', () => {
     } else {
         alert('a number between 1 and 30 thank you');
     };
-
-    clearBtn.addEventListener('click', () => {
-        cells.forEach(cell => {
-            cell.style.cssText = 'background: white';
-        });
-    });
 });
