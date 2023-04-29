@@ -21,6 +21,8 @@ cells.forEach(cell => {
     });
 });
 
+const newBtn = document.querySelector('.new');
+
 const clearBtn = document.querySelector('.clear');
 
 clearBtn.addEventListener('click', () => {
@@ -29,12 +31,8 @@ clearBtn.addEventListener('click', () => {
     });
 });
 
-const newBtn = document.querySelector('.new');
-
 function createGrid(size) {
     container.innerHTML = '';
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for (let i = 0; i < size * size; i++) {
         const cell = document.createElement('div');
@@ -58,4 +56,10 @@ newBtn.addEventListener('click', () => {
     } else {
         alert('a number between 1 and 30 thank you');
     };
+
+    clearBtn.addEventListener('click', () => {
+        cells.forEach(cell => {
+            cell.style.cssText = 'background: white';
+        });
+    });
 });
