@@ -1,5 +1,6 @@
 body {
     background: lightgray;
+    text-align: center;
 }
 
 .container {
@@ -22,4 +23,14 @@ body {
     box-sizing: border-box;
     flex-grow: 1;
     background: white;
+}
+
+button {
+    background: white;
+    font-size: 20px;
+    padding: 10px;
+    color: gray;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 20px;
 }
