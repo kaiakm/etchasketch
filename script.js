@@ -24,5 +24,7 @@ cells.forEach(cell => {
 const btn = document.querySelector('.clear');
 
 btn.addEventListener('click', () => {
-    cells.style.cssText = 'background: white';
+    cells.forEach(cell => {
+        cell.style.cssText = 'background: white';
+    });
 });
