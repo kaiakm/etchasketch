@@ -12,3 +12,8 @@ for (let i = 0; i < 16 * 16; i++) {
 
     container.appendChild(item);
 };
+
+const gridSize = document.querySelector('#grid-size');
+gridSize.addEventListener("click", (e) => {
+    let input = prompt(`Enter a number (1-100)`);
+});
