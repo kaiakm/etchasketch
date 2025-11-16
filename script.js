@@ -1,12 +1,11 @@
 const container = document.querySelector('#container');
+const containerWidth = container.clientWidth;
 
-const numRows = 16;
-const numCols = 16;
+for (let i = 0; i < 16 * 16; i++) {
+    const item = document.createElement("div");
+    item.id = "grid-item";
+    item.style.width = `${containerWidth / 16}px`;
+    item.style.height = `${containerWidth / 16}px`;
 
-for (let i = 0; i < numRows; i++) {
-    for (let j = 0; j < numCols; j++) {
-        const gridSquare = document.createElement('div');
-        gridSquare.setAttribute('id', 'grid-square');
-        container.appendChild(gridSquare);
-    }
-}
+    container.appendChild(item);
+};
