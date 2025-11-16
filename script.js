@@ -6,6 +6,9 @@ for (let i = 0; i < 16 * 16; i++) {
     item.id = "grid-item";
     item.style.width = `${containerWidth / 16}px`;
     item.style.height = `${containerWidth / 16}px`;
+    item.addEventListener("mouseenter", (e) => {
+        e.target.style.backgroundColor = "black";
+    });
 
     container.appendChild(item);
 };
