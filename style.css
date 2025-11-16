@@ -1,0 +1,18 @@
+body {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#grid-square {
+    border: 1px solid;
+    flex: 1;
+    min-height: auto;
+}
