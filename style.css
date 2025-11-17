@@ -39,6 +39,7 @@ button {
     font-size: 18px;
     text-transform: lowercase;
     border: 2px solid #615b56;
+    color:#615b56;
 }
 
 button:hover {
